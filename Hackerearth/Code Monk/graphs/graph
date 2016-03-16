@@ -1,0 +1,22 @@
+def dfs(g , node , traversed):
+    traversed[node] = True
+    for nnodes in traversed[node]:
+        if nnodes not in traversed:
+            return dfs(g , nnodes , traversed)
+t = int(raw_input())
+for i in range(t):
+    n , m = map(int , raw_input().split())
+    g = {}
+    for i in range(m):
+        a , b = map(int , raw_input().split())
+        if a not in g:
+            g[a] = {}
+        (g[a])[b] = 1
+        if b not in g:
+            g[b] = {}
+        (g[b])[a] = 1
+    traversed = {}
+    for node in g.keys():
+        if node not in traversed:
+             dfs(g , node , traversed)
+    print traversed

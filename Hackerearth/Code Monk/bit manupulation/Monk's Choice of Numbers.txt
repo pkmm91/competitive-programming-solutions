@@ -1,0 +1,15 @@
+1. t = int(raw_input())
+2. for i in range(t):
+3. 	n , k = map(int , raw_input().split())
+4. 	arr = map(int , raw_input().split())
+5. 	for i in range(n):
+6. 		count = 0
+7. 		n = arr[i]
+8. 		while n:
+9. 			n = n & (n-1)
+10. 			count += 1
+11. 		arr[i] =  count
+12. 	arr = sorted(arr , reverse = True)
+13. 	print sum(arr[0:k])
+14. 	
+

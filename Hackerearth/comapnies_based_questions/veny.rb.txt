@@ -1,0 +1,17 @@
+cipher = Array["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" ,"q" , "r" , "s", "t" , "u" ,"v" , "w" , "x" ,"y" ,"z"]
+test = gets.chomp
+counter = 1
+while counter <= Integer(test)
+  s = gets.chomp
+  p = s.reverse
+  if s.eql?(p)
+  	puts "Palindrome"
+  else
+  	sum = 1
+    s.each_char do |c|
+    	sum = sum * (cipher.index(c) + 1)
+    end
+  	puts sum
+  end
+  counter = counter + 1
+end

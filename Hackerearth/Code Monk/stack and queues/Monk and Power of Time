@@ -1,0 +1,19 @@
+from Queue import *
+n = int(raw_input())
+calling = map(int , raw_input().split())
+ideal = map(int , raw_input().split())
+q = Queue()
+for e in calling:
+    q.put(e)
+t , p = 0 , 0
+while not q.empty():
+    item = q.get()
+    if item == ideal[p]:
+        t += 1
+        p += 1
+    else:
+        q.put(item)
+        t += 1
+print t
+    
+    

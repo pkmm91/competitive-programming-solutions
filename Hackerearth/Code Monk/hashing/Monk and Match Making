@@ -1,0 +1,41 @@
+s = raw_input()
+n = len(s)
+d = {}
+for i in range(1 , n+1):
+    d[i] = s[i-1]
+q = int(raw_input())
+for i in range(q):
+    l1 , r1 , l2 , r2 = map(int , raw_input().split())
+    s1 , s2 = "" , ""
+    if abs(l1-r1) == abs(l2-r2):
+        for i in range(l1 , r1+1):
+            s1 += d[i]
+        for i in range(l2 , r2+1):
+            s2 += d[i]
+        if s1 == s2:
+            print "Yes"
+        else:
+            print "No"
+    else:
+        print "No"
+        
+Note : only 5 points
+
+/////////////////////////////////////////////////////////////////////////////
+
+s = raw_input()
+n = len(s)
+d = {}
+for i in range(1 , n+1):
+    d[i] = s[i-1]
+q = int(raw_input())
+for i in range(q):
+    l1 , r1 , l2 , r2 = map(int , raw_input().split())
+    s1 , s2 = s[l1-1 , r1] , s[l2-1 , r2]
+    if s1 == s2:
+        print "Yes"
+    else:
+        print "No"
+
+Note: 100 points
+        

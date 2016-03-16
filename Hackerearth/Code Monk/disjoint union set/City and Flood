@@ -1,0 +1,30 @@
+def union(arr , size , a, b):
+    root_a = root(a)
+    root_b = root(b)
+    if size[a] < size[b]:
+        arr[root_a] = arr[root_b]
+        size[root_b] += size[root_a]
+    else:
+        arr[root_b] = arr[root_a]
+        size[root_a] += size[root_b]
+def root(x):
+    while arr[x] != x:
+        arr[x] = arr[arr[i]]
+        x = arr[x]
+    return x
+    
+    
+n = int(raw_input())
+k = int(raw_input())
+arr = []
+size  = []
+for i in range(n):
+    arr.append(i)
+    size.append(1)
+    
+for i in range(k):
+    a , b = map(int , raw_input().split())
+    union(arr , size , a , b)
+print arr
+print size
+

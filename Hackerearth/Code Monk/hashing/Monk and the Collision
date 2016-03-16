@@ -1,0 +1,12 @@
+t = int(raw_input())
+for i in range(t):
+    n = int(raw_input())
+    arr = map(int , raw_input().split())
+    d = {}
+    count = 0
+    for e in arr:
+        if (e % 10) in d:
+            count += 1
+        else:
+            d[e%10] = 1
+    print count

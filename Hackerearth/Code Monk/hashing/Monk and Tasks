@@ -1,0 +1,18 @@
+from collections import defaultdict
+t = int(raw_input())
+for i in range(t):
+    n = int(raw_input())
+    arr = map(int , raw_input().split())
+    d = defaultdict(list)
+    for e in arr:
+        n , count = e , 0
+        while n :
+            n = n & n-1
+            count += 1
+        d[count].append(e)
+    s = []
+    for k in d:
+        for e in d[k]:
+            s.append(e)
+    print " ".join(map(str , s))
+            

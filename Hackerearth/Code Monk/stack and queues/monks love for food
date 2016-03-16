@@ -1,0 +1,12 @@
+t = int(raw_input())
+pack = []
+for i in range(t):
+    arr = map(int , raw_input().split())
+    if arr[0] == 1:
+        if len(pack) == 0:
+            print "No Food"
+        else:
+            print pack.pop()
+    else:
+        if arr[0] == 2:
+            pack.append(arr[1])
