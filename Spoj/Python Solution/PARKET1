@@ -1,0 +1,5 @@
+from math import sqrt as s
+r , b = map(int , raw_input().split())
+l = r//2 + 2
+b = int(s(l**2 - 4*(r+b)))
+print (l+b)//2 , (l-b)//2

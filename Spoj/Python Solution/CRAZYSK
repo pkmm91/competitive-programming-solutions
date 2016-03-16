@@ -1,0 +1,9 @@
+for i in range(input()):
+    n , x = raw_input().split()
+    n , x =  int(n) , int(x)
+    res = n + (n/(x-1))
+    if n % x == 0:
+        print res
+    else:
+        print res-1
+

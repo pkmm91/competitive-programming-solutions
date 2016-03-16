@@ -1,0 +1,4 @@
+from math import *
+for i in range(input()):
+    n = input()
+    print int(log(n , 2))

@@ -1,0 +1,4 @@
+for i in range(1 , input()+1):
+    E , N = map(int , raw_input().split())
+    re , rn = (E , N) if E > N else (N , E)
+    print (E + N )// 3 if rn > re/2 else rn

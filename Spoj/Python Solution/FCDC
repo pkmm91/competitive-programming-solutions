@@ -1,0 +1,10 @@
+a , b , c , d , e , w = map(int , raw_input().split())
+if w % 2 != 0:
+    print "NO"
+else:
+    res = a*2 + b*4 + c*8 + d*16 + d*32
+    if res >= w:
+        print "YES"
+    else:
+        print "NO"
+    
