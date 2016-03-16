@@ -1,0 +1,11 @@
+from collections import defaultdict
+d = defaultdict(list)
+n , m = map(int , raw_input().split())
+for i in range(n):
+    d[raw_input()].append(str(i+1))
+for i in range(m):
+    a = raw_input()
+    if a in d:
+        print " ".join(d[a])
+    else:
+        print "-1"

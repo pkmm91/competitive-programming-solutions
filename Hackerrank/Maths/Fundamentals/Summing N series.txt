@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdio>
+#include <cmath>
+using namespace std;
+
+int main() {
+ long long int r, n, t;
+ const int md=1e9+7;
+ scanf("%lld", &t);
+ while(t--) {
+  scanf("%lld", &n);
+  n%=md;
+  r=(n*n)%md;
+  printf("%lld\n", r);
+ }
+ return 0;
+}

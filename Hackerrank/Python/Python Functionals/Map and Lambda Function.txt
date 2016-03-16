@@ -1,0 +1,10 @@
+def fib(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+l = [fib(i) for i in range(15)]
+t = input()
+print list(map(lambda x : x**3 , l[:t]))

@@ -1,0 +1,6 @@
+dict = {}
+for i in xrange(input()):
+    n = map(str , raw_input().split() )
+    dict[n[0]] = (float(n[1]) + float(n[2]) + float(n[3]))/3
+k = raw_input()
+print "%0.2f"%(dict[k])

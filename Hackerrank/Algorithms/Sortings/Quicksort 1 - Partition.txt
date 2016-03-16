@@ -1,0 +1,14 @@
+def partition(ar):   
+    less = []
+    more = []
+    pivot = [ar[0]]
+    for e in ar:
+        if e < ar[0]:
+            less.append(e)
+        elif e > ar[0]:
+            more.append(e)
+    print " ".join (map( str , less + pivot + more))
+
+m = input()
+ar = [int(i) for i in raw_input().strip().split()]
+partition(ar)

@@ -1,0 +1,13 @@
+for i in range(input()):
+    n = int(raw_input())
+    A = map(int , raw_input().split())
+    buy = [1]*n
+    profit = 0
+    m = 0
+    for i in range(n-1 , -1,-1):
+        a = A[i]
+        if m <= a:
+            buy[i] = 0
+            m = a
+        profit += m-a
+    print profit

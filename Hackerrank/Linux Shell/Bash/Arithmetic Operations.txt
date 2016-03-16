@@ -1,0 +1,2 @@
+read num
+printf "%0.3f\n" $(bc -l <<< "$num")

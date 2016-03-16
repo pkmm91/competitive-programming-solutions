@@ -1,0 +1,17 @@
+from operator import itemgetter
+from itertools import groupby
+
+test = int(raw_input())
+l = list()
+for i in range(test):
+    a = raw_input()
+    l.append(a.split())
+    
+l.sort(key=itemgetter(2))
+
+for elt, items in groupby(l, itemgetter(2)):
+    for i in items:
+        if i[3] == 'M':
+            print "Mr.",i[0],i[1]
+        else:
+            print "Ms.",i[0],i[1]

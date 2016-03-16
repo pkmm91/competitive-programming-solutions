@@ -1,0 +1,6 @@
+t = int(raw_input())
+for i in range(t):
+    px , py , qx , qy = map(int , raw_input().split())
+    a = 2*qx - px
+    b = 2*qy - py
+    print "%d %d"%(a , b) 

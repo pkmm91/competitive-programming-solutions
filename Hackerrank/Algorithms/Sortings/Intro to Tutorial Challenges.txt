@@ -1,0 +1,4 @@
+r = int(raw_input())
+s = int(raw_input())
+arr = map(int , raw_input().split())
+print arr.index(r)

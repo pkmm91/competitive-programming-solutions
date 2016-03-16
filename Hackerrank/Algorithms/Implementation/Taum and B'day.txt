@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+   int t;
+   long long int b,w,x,y,z;
+   scanf("%d",&t);
+   while(t--)
+   {
+   scanf("%lld %lld",&b,&w);
+   long long int r1,r2,r3;
+   scanf("%lld %lld %lld",&x,&y,&z);
+
+       r1 =( (b*z) + (b+w)*y);
+       r2 = (  ((b+w)*x)+(w*z) );
+       r3 = ( (b*x)+(w*y) );
+       long long int min1 = min(r1,r2);
+       long long int min2 = min(min1,r3);
+       printf("%lld\n",min2);
+
+   }
+    return 0;
+}

@@ -1,0 +1,8 @@
+import re
+pattern = '^\(?([A-Z]{5})\)?([0-9]{4})?([A-Z]{1})$'
+for i in xrange(input()):
+    
+    if re.search(pattern, raw_input()):
+       print 'YES'
+    else:
+       print 'NO'

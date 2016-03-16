@@ -1,0 +1,6 @@
+from math import *
+for i in range(input()):
+    a , b = map(int , raw_input().split())
+    b = floor(sqrt(b))
+    a = ceil(sqrt(a))
+    print int(b-a)+1 

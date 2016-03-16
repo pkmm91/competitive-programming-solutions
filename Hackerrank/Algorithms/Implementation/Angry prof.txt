@@ -1,0 +1,11 @@
+for i in range(input()):
+    n , k = map(int , raw_input().split())
+    arr = map(int , raw_input().split())
+    count = 0
+    for e in arr:
+        if e <= 0:
+            count +=1
+    if count >= k:
+        print "NO"
+    else:
+        print "YES"

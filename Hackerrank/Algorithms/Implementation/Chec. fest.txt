@@ -1,0 +1,16 @@
+T = int(raw_input())
+for i in range (0,T):
+    A,B,M = [int(x) for x in raw_input().split(' ')]
+    chocos = A/B
+    if  M > chocos:
+        print chocos
+    else:
+        newChocos = chocos/M
+        remWrappers = chocos%M 
+        chocos += newChocos
+        while (newChocos + remWrappers) >=M:
+            chocos += (newChocos+remWrappers)/M 
+            temp = (newChocos+remWrappers)%M
+            newChocos = (newChocos+remWrappers)/M 
+            remWrappers = temp
+        print chocos  

@@ -1,0 +1,9 @@
+res = []
+def ans(a , b , n):
+    res.append(a)
+    res.append(b)
+    for i in range(2 , n):
+        res.append( (res[i-1]**2) + res[i-2] )
+    return res[n-1]
+a , b , n = map(int , raw_input().split())
+print ans(a , b , n)

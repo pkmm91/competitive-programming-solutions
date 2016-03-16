@@ -1,0 +1,3 @@
+l , s1 , s2 = map(int , raw_input().split())
+for i in range(input()):
+    print "%0.4lf"%((2**0.5 ) * (l - int(raw_input())**0.5)/abs(s1-s2))

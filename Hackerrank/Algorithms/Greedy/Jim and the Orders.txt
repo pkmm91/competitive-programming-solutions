@@ -1,0 +1,7 @@
+t = int(raw_input())
+l = []
+for i in range(t):
+    t , d = map(int , raw_input().split())
+    l.append([(t+d) , i+1])
+for i in sorted(l):
+    print i[1],

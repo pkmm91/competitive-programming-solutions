@@ -1,0 +1,11 @@
+def find_digits(num):
+       count = 0
+       lst = list(str(num))
+       for i in  lst:
+            if  int(i) != 0:
+               if  num % int(i) == 0:
+                   count +=1 
+       return count
+for i in range(input()):
+    num = int(raw_input())
+    print find_digits(num)

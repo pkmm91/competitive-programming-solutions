@@ -1,0 +1,5 @@
+for i in range(input()):
+    s = raw_input()
+    r  = s.lower()
+    if r[0] == 'h' and r[1] == 'i' and r[2] == ' ' and r[3] != 'd':
+        print s

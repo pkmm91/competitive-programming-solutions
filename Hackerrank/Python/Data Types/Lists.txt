@@ -1,0 +1,23 @@
+l = []
+for i in xrange(input()):
+    n = map(str , raw_input().split())
+    if n[0] == 'append':
+        l.append(n[1])
+    if n[0] == 'insert':
+        l.insert(int(n[1]) , int(n[2]))
+    if n[0] == 'remove':
+        l.remove(int(n[1]))
+    if n[0] == 'pop':
+        l.pop()
+    if n[0] == 'index':
+        l.index(int(n[1]))
+    if n[0] == 'count':
+        l.count(int(n[1]))
+    if n[0] == 'sort':
+        l = [int(i) for i in l]
+        l.sort()
+    if n[0] == 'reverse':
+        l.reverse()
+    if n[0] == 'print':
+        l = [int(i) for i in l]
+        print l

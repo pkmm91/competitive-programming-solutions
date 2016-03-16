@@ -1,0 +1,8 @@
+count = 0
+for i in range(input()):
+    s = raw_input().lower()
+    s = s.split()
+    for st in s:
+        if st.endswith('hackerrank'):
+            count += 1
+print count
